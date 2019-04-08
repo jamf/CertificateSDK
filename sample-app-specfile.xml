@@ -1,0 +1,118 @@
+<managedAppConfiguration>
+	<version>1.0.0</version>
+	<bundleId>com.jamf.certificate-sdk.sample</bundleId>
+	<dict>
+		<string keyName="com.jamf.config.jamfpro.url">
+			<defaultValue>
+				<value>https:&#x2F;&#x2F;example.com&#x2F;</value>
+			</defaultValue>
+		</string>
+		<string keyName="com.jamf.config.jamfpro.invitation">
+			<defaultValue>
+				<value>$MOBILEDEVICEAPPINVITE</value>
+			</defaultValue>
+		</string>
+		<string keyName="com.jamf.config.device.udid">
+			<defaultValue>
+				<value>UDID</value>
+			</defaultValue>
+		</string>
+		<integer keyName="com.jamf.config.certificate-request.pkiId">
+			<defaultValue>
+				<value>3</value>
+			</defaultValue>
+		</integer>
+		<string keyName="com.jamf.config.certificate-request.subject">
+			<defaultValue>
+				<value>cn=something</value>
+			</defaultValue><constraints nullable="true"   >
+            </constraints>
+		</string>
+		<string keyName="com.jamf.config.certificate-request.sanType">
+			<defaultValue>
+				<value>rfc822Name</value>
+			</defaultValue><constraints nullable="true"   >
+            </constraints>
+		</string>
+		<string keyName="com.jamf.config.certificate-request.sanValue">
+			<defaultValue>
+				<value>somebody@example.com</value>
+			</defaultValue><constraints nullable="true"   >
+            </constraints>
+		</string>
+		<string keyName="com.jamf.config.certificate-request.template"><constraints nullable="true"   >
+            </constraints>
+		</string>
+	</dict>
+	<presentation defaultLocale="en-US">
+	<fieldGroup>
+		<name>
+			<language value="en-US">Jamf Certificate SDK</language>
+		</name>
+		<field keyName="com.jamf.config.jamfpro.url" type="input">
+			<label>
+				<language value="en-US">Jamf Pro server URL</language>
+			</label>
+			<description>
+				<language value="en-US">URL of your Jamf Pro server</language>
+			</description>
+		</field>
+		<field keyName="com.jamf.config.jamfpro.invitation" type="input">
+			<label>
+				<language value="en-US">Jamf Pro API Invitation</language>
+			</label>
+			<description>
+				<language value="en-US">A one time use code to connect to Jamf Pro's API.</language>
+			</description>
+		</field>
+		<field keyName="com.jamf.config.device.udid" type="input">
+			<label>
+				<language value="en-US">Device UDID</language>
+			</label>
+			<description>
+				<language value="en-US">The device's UDID</language>
+			</description>
+		</field>
+		<field keyName="com.jamf.config.certificate-request.pkiId" type="input">
+			<label>
+				<language value="en-US">Jamf Pro PKI ID</language>
+			</label>
+			<description>
+				<language value="en-US">The id value of the PKI record to use in Jamf Pro</language>
+			</description>
+		</field>
+		<field keyName="com.jamf.config.certificate-request.subject" type="input">
+			<label>
+				<language value="en-US">Certificate Subject</language>
+			</label>
+			<description>
+				<language value="en-US">The subject value for defining your cert.  Likely will contain user/device variables.</language>
+			</description>
+		</field>
+		<field keyName="com.jamf.config.certificate-request.sanType" type="input">
+			<label>
+				<language value="en-US">Subject Alternative Name type</language>
+			</label>
+			<description>
+				<language value="en-US">The type of the Subject Alternative Name</language>
+			</description>
+		</field>
+		<field keyName="com.jamf.config.certificate-request.sanValue" type="input">
+			<label>
+				<language value="en-US">Subject Alternative Name</language>
+			</label>
+			<description>
+				<language value="en-US">The SAN in a format specified by the type.  Likely will contain user/device variables.</language>
+			</description>
+		</field>
+		<field keyName="com.jamf.config.certificate-request.template" type="input">
+			<label>
+				<language value="en-US">ADCS CA Template</language>
+			</label>
+			<description>
+				<language value="en-US">The name of the ADCS CA template to use (leave blank if no template is needed).</language>
+			</description>
+		</field>
+	</fieldGroup>
+	</presentation>
+</managedAppConfiguration>
