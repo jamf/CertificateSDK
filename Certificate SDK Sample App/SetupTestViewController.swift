@@ -1,8 +1,9 @@
 //
 //  SetupTestViewController.swift
 //  Certificate SDK Sample App
+//  https://github.com/jamf/CertificateSDK
 //
-//  Copyright © 2018 Jamf. All rights reserved.
+//  Copyright © 2019 Jamf. All rights reserved.
 //
 
 import UIKit

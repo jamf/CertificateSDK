@@ -37,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9712A85B213EED15003A2789 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		9797329320B37D7000CF87D8 /* CertificateSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CertificateSDK.framework; sourceTree = "<group>"; };
 		97BE792F20AB6FF3009579E5 /* Certificate SDK Sample App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Certificate SDK Sample App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BE793220AB6FF3009579E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		97BE792620AB6FF3009579E5 = {
 			isa = PBXGroup;
 			children = (
+				9712A85B213EED15003A2789 /* .swiftlint.yml */,
 				97BE793120AB6FF3009579E5 /* Certificate SDK Sample App */,
 				9797329320B37D7000CF87D8 /* CertificateSDK.framework */,
 				97BE793020AB6FF3009579E5 /* Products */,
@@ -135,6 +137,7 @@
 				TargetAttributes = {
 					97BE792E20AB6FF3009579E5 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1120;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -360,7 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jamf.certificate-sdk.sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/CertificateSDK.framework/Headers/CertificateSDK.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -382,7 +385,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jamf.certificate-sdk.sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/CertificateSDK.framework/Headers/CertificateSDK.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

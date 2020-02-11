@@ -1,28 +1,30 @@
 /*
-  CertificateRequestDelegate.h
-  CertificateSDK
+ CertificateRequestDelegate.h
 
- Copyright © 2018 Jamf. All rights reserved.
+ https://github.com/jamf/CertificateSDK
 
- This Jamf software is covered by the "Jamf Certificate SDK License".
- The first two sections are included here for reference, but please refer
- to the complete Jamf Certificate SDK License which is included in the SDK.
+ MIT License
 
- 1. License Grant. Jamf hereby grants Licensee a limited, nonexclusive, nontransferable,
- nonsublicensable, royalty free, fully paid up right to use the Jamf Pro software development
- kit (“SDK”) solely for integrating Jamf Pro into the Licensee Product; and copy, distribute,
- and connect with other software Jamf Pro as integrated into the LIcensee product, which it
- may sell or offer to sell, or authorize others to the same, to end users.
+ Copyright (c) 2019 Jamf Open Source Community
 
- 2. License Restrictions. The SDK is provided under a license, not sold. Except for the rights
- expressly granted by Jamf to Licensee above, there are no other licenses granted to Licensee
- under this Agreement, express or implied, and Jamf reserves all rights, title, and interest in
- and to the SDK. Licensee will not engage, directly or indirectly, in the disassembly, reverse
- engineering, decompilation, modification, or translation of the SDK. Licensee will not copy and
- sell the SDK as a stand-alone package nor create derivative works of the SDK without the prior
- written consent of Jamf. Licensee shall not remove or destroy any proprietary, confidential,
- copyright, trademark, or patent markings or notices placed upon the SDK.
- */
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+*/
 
 #ifndef CertificateRequestDelegate_h
 #define CertificateRequestDelegate_h

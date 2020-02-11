@@ -1,12 +1,13 @@
 //
 //  ActionLogViewController.swift
 //  Certificate SDK Sample App
+//  https://github.com/jamf/CertificateSDK
 //
-//  Copyright © 2018 Jamf. All rights reserved.
+//  Copyright © 2019 Jamf. All rights reserved.
 //
 
-import UIKit
 import CertificateSDK
+import UIKit
 
 class ActionLogViewController: UIViewController {
 
@@ -54,16 +55,16 @@ class ActionLogViewController: UIViewController {
 
     // MARK: -
 
+    /// Start a new certificate request.
     func runTest() {
-        // Start a new certificate request.
         if let sdkSetup = setup {
             requestManager?.cancelPendingRequest()
             requestManager?.startRequest(with: sdkSetup)
         }
     }
 
+    /// Update the user interface for the detail item.
     func resetBaseTextView() {
-        // Update the user interface for the detail item.
         if let sdkSetup = setup, let textView = actionLogTextView {
             textView.text = "Setup: \(sdkSetup.description)"
 
@@ -72,7 +73,7 @@ class ActionLogViewController: UIViewController {
     }
 
     func append(_ logText: String) {
-        DispatchQueue.main.async(execute: {
+        DispatchQueue.main.async {
             if let textView = self.actionLogTextView {
                 let existingText = textView.text ?? ""
                 let newText = "\(existingText)\n\(logText)"
@@ -82,7 +83,7 @@ class ActionLogViewController: UIViewController {
                 let lastChar = NSRange(location: (newText as NSString).length - 1, length: 1)
                 textView.scrollRangeToVisible(lastChar)
             }
-        })
+        }
     }
 
     func updateProgress(_ progress: Float) {

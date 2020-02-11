@@ -1,8 +1,9 @@
 //
 //  KeychainHandler.swift
 //  Certificate SDK Sample App
+//  https://github.com/jamf/CertificateSDK
 //
-//  Copyright © 2018 Jamf. All rights reserved.
+//  Copyright © 2019 Jamf. All rights reserved.
 //
 
 import Foundation
@@ -22,6 +23,10 @@ struct KeychainHandler {
             return "Keychain item already exists"
         case errSecSuccess:
             return "Keychain item added"
+        case errSecNotAvailable:
+            var result = "Keychain item could not be added. Your device probably does not have a passcode."
+            result += "Set a passcode and try again."
+            return result
         default:
             return "Keychain add resulted in status: \(status)"
         }
@@ -30,10 +35,10 @@ struct KeychainHandler {
     func clearKeychain() -> String {
         var resultString = ""
         let query = [kSecMatchLimit: kSecMatchLimitAll,
-                     kSecReturnAttributes: kCFBooleanTrue,
-                     kSecReturnRef: kCFBooleanTrue,
+                     kSecReturnAttributes: true,
+                     kSecReturnRef: true,
                      kSecClass: kSecClassIdentity] as CFDictionary
-        var result: CFTypeRef? = nil
+        var result: CFTypeRef?
         let resultCode = SecItemCopyMatching(query, &result)
 
         if resultCode == errSecSuccess {
@@ -66,9 +71,9 @@ struct KeychainHandler {
         var resultString = "--- Certificates in Keychain ---\n"
         var outputACert = false
         let query = [kSecMatchLimit: kSecMatchLimitAll,
-                     kSecReturnRef: kCFBooleanTrue,
+                     kSecReturnRef: true,
                      kSecClass: kSecClassCertificate] as CFDictionary
-        var result: CFTypeRef? = nil
+        var result: CFTypeRef?
         let resultCode = SecItemCopyMatching(query, &result)
 
         if resultCode == errSecSuccess {

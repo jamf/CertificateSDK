@@ -1,8 +1,9 @@
 //
 //  AppDelegate.swift
 //  Certificate SDK Sample App
+//  https://github.com/jamf/CertificateSDK
 //
-//  Copyright © 2018 Jamf. All rights reserved.
+//  Copyright © 2019 Jamf. All rights reserved.
 //
 
 import UIKit
@@ -16,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     let requestManager = CertificateRequestManager()
 
     func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         if let splitViewController = window!.rootViewController as? UISplitViewController {
             let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1]

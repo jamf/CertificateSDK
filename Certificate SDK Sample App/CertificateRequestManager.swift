@@ -1,8 +1,9 @@
 //
 //  CertificateRequestManager.swift
 //  Certificate SDK Sample App
+//  https://github.com/jamf/CertificateSDK
 //
-//  Copyright © 2018 Jamf. All rights reserved.
+//  Copyright © 2019 Jamf. All rights reserved.
 //
 
 import UIKit
@@ -42,6 +43,7 @@ class CertificateRequestManager: NSObject {
             }
             certificateRequest = localRequest
         }
+
         certificateRequest?.startNewCertificateRequest()
     }
 
@@ -80,8 +82,13 @@ extension CertificateRequestHandler: CertificateRequestDelegate {
     }
 
     func certificateRequest(_ request: CertificateRequestProtocol, isUsingNetwork: Bool) {
+        self.textOutputHandler?("Using network: \(isUsingNetwork)")
         DispatchQueue.main.async {
             UIApplication.shared.isNetworkActivityIndicatorVisible = isUsingNetwork
         }
+    }
+
+    func certificateRequest(_ request: CertificateRequestProtocol, isWaitingForMAC waitingForMAC: Bool) {
+        self.textOutputHandler?("Waiting for AppConfig: \(waitingForMAC)")
     }
 }
