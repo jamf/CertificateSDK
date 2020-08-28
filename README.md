@@ -40,6 +40,8 @@ with `com.jamf.config.` so they will not clash with your own naming conventions 
     <string>rfc822Name</string>
     <key>com.jamf.config.certificate-request.sanValue</key>
     <string>somebody@example.com</string>
+    <key>com.jamf.config.certificate-request.signature</key>
+    <string>$JAMF_SIGNATURE_com.jamf.config.certificate-request</string>
     </dict>
 
 ###### MAC key discussion
