@@ -1,20 +1,28 @@
 ## Jamf Certificate SDK
 
-###### Framework Architectures
+--------
 
-The included framework ships with two simulator architectures (i386 and x86_64) and two device architectures
+### Installation
+
+Jamf Certificate SDK is available through the [Swift Package Manager](https://swift.org/package-manager/).
+
+To install via the Swift Package Manager add the following line to your `Package.swift` file's `dependencies`:
+
+```swift
+.package(url: "https://github.com/jamf/CertificateSDK.git", from: "1.1.0")
+```
+
+--------
+
+#### Framework Architectures
+
+The included XCFramework ships with three simulator architectures (arm64, i386, and x86_64) and two device architectures
 (armv7 and arm64).  This allows third-party app developers to use the framework both in their own simulators
-running on their development Macs, and on actual devices.
+running on their development Macs (including Apple Silicon), and on actual devices.
 
-When building the third-party app, only some of these architectures are going to be useful for an individual build of
-the app.  The framework includes a bash script that should run within an Xcode "Run Script" build phase to thin out
-the framework of unused architectures.  Look at the example app's Run Script build phase for a working example of
-this.
+--------
 
-`bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/CertificateSDK.framework/ios-strip-framework.sh" CertificateSDK`
-
-
-#### Managed App Config Required Settings
+### Managed App Config Required Settings
 
 To ensure proper use of the SDK, the iOS app is required to be distributed by Jamf Pro.  During distribution, an App Configuration
 can be specified that will let the SDK communicate with Jamf Pro and request the proper certificate.  Here is a sample App Configuration

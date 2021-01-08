@@ -34,15 +34,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gqYqAVcVLDt65oytZWWRd1VSvU4=
+		x0vydHDHo2HnbzWm6jQ3Y9y6Jjs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		Okt3WKgLOeLqLPPyFALrePQEDQs=
-		</data>
-		<key>ios-strip-framework.sh</key>
-		<data>
-		D/b1s3D5r7ky14btr01FXrFpTTU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -133,17 +129,6 @@
 			<key>hash2</key>
 			<data>
 			+w/0sYILFq3Jg+dPEjILJ4+6ryCSvZYk+XFyMbQKzzM=
-			</data>
-		</dict>
-		<key>ios-strip-framework.sh</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			D/b1s3D5r7ky14btr01FXrFpTTU=
-			</data>
-			<key>hash2</key>
-			<data>
-			3rMm1fv/Fls5z7uLWeQqttpRo+vRzRMD3DH2E7Ysxvg=
 			</data>
 		</dict>
 	</dict>

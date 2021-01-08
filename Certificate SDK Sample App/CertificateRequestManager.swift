@@ -6,6 +6,7 @@
 //  Copyright © 2019 Jamf. All rights reserved.
 //
 
+import CertificateSDK
 import UIKit
 
 class CertificateRequestManager: NSObject {

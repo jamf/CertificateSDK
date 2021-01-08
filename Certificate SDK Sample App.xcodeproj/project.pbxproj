@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9797329420B37D7000CF87D8 /* CertificateSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9797329320B37D7000CF87D8 /* CertificateSDK.framework */; };
-		9797329520B37D7000CF87D8 /* CertificateSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9797329320B37D7000CF87D8 /* CertificateSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		972DA469258D542E00ABD6A3 /* CertificateSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972DA467258D53C900ABD6A3 /* CertificateSDK.xcframework */; };
+		972DA46A258D542E00ABD6A3 /* CertificateSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 972DA467258D53C900ABD6A3 /* CertificateSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		97BE793320AB6FF3009579E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE793220AB6FF3009579E5 /* AppDelegate.swift */; };
 		97BE793520AB6FF3009579E5 /* SetupTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE793420AB6FF3009579E5 /* SetupTestViewController.swift */; };
 		97BE793720AB6FF3009579E5 /* ActionLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE793620AB6FF3009579E5 /* ActionLogViewController.swift */; };
@@ -29,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9797329520B37D7000CF87D8 /* CertificateSDK.framework in Embed Frameworks */,
+				972DA46A258D542E00ABD6A3 /* CertificateSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		9712A85B213EED15003A2789 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		9797329320B37D7000CF87D8 /* CertificateSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CertificateSDK.framework; sourceTree = "<group>"; };
+		972DA467258D53C900ABD6A3 /* CertificateSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CertificateSDK.xcframework; sourceTree = "<group>"; };
 		97BE792F20AB6FF3009579E5 /* Certificate SDK Sample App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Certificate SDK Sample App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BE793220AB6FF3009579E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97BE793420AB6FF3009579E5 /* SetupTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTestViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9797329420B37D7000CF87D8 /* CertificateSDK.framework in Frameworks */,
+				972DA469258D542E00ABD6A3 /* CertificateSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +71,7 @@
 			children = (
 				9712A85B213EED15003A2789 /* .swiftlint.yml */,
 				97BE793120AB6FF3009579E5 /* Certificate SDK Sample App */,
-				9797329320B37D7000CF87D8 /* CertificateSDK.framework */,
+				972DA467258D53C900ABD6A3 /* CertificateSDK.xcframework */,
 				97BE793020AB6FF3009579E5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,7 +132,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = Jamf;
 				TargetAttributes = {
 					97BE792E20AB6FF3009579E5 = {
@@ -191,7 +191,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -258,6 +258,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -318,6 +319,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -351,10 +353,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = "Certificate SDK Sample App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -362,7 +360,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jamf.certificate-sdk.sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/CertificateSDK.framework/Headers/CertificateSDK.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,10 +370,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = "Certificate SDK Sample App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -384,7 +377,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jamf.certificate-sdk.sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/CertificateSDK.framework/Headers/CertificateSDK.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
