@@ -14,7 +14,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "CertificateSDKPackage",
-            path: "CertificateSDK.xcframework"
+            path: "CertificateSDKPackage.xcframework"
         )
     ]
 )
