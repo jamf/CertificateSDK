@@ -9,11 +9,11 @@ let package = Package(
     products: [
         .library(
             name: "CertificateSDK",
-            targets: ["CertificateSDKPackage"])
+            targets: ["CertificateSDK"])
     ],
     targets: [
         .binaryTarget(
-            name: "CertificateSDKPackage",
+            name: "CertificateSDK",
             path: "CertificateSDK.xcframework"
         )
     ]
