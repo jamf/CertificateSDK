@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,10 +16,23 @@
 		97BE793C20AB6FF5009579E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BE793B20AB6FF5009579E5 /* Assets.xcassets */; };
 		97BE793F20AB6FF5009579E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BE793D20AB6FF5009579E5 /* LaunchScreen.storyboard */; };
 		97BE794720AB70D2009579E5 /* Jamf-one-color-knockout.png in Resources */ = {isa = PBXBuildFile; fileRef = 97BE794620AB70D2009579E5 /* Jamf-one-color-knockout.png */; };
-		97BE794920AF7ABA009579E5 /* CertificateSDKSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE794820AF7ABA009579E5 /* CertificateSDKSetup.swift */; };
-		97BE9ACE20B32CA00047C4E8 /* test_certificate.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 97BE9ACD20B32CA00047C4E8 /* test_certificate.p12 */; };
-		97FFD0FB20DDA1BD00355359 /* KeychainHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FFD0FA20DDA1BD00355359 /* KeychainHandler.swift */; };
-		97FFD0FD20E150E300355359 /* CertificateRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FFD0FC20E150E300355359 /* CertificateRequestManager.swift */; };
+		C034E8062BEC2D7800BF02D1 /* LocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C034E8052BEC2D7800BF02D1 /* LocalNotificationService.swift */; };
+		C034E8072BEC2D7800BF02D1 /* LocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C034E8052BEC2D7800BF02D1 /* LocalNotificationService.swift */; };
+		C04D817A2BEBC9130024FDFC /* CertificateSDKSampleVisionOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D81792BEBC9130024FDFC /* CertificateSDKSampleVisionOSApp.swift */; };
+		C04D817C2BEBC9130024FDFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D817B2BEBC9130024FDFC /* ContentView.swift */; };
+		C04D817E2BEBC9140024FDFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04D817D2BEBC9140024FDFC /* Assets.xcassets */; };
+		C04D81872BEBC92C0024FDFC /* CertificateSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972DA467258D53C900ABD6A3 /* CertificateSDK.xcframework */; };
+		C04D81882BEBC92C0024FDFC /* CertificateSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 972DA467258D53C900ABD6A3 /* CertificateSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C057C9BC2BEBFCBF00D57102 /* RequestTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057C9BB2BEBFCBF00D57102 /* RequestTypeView.swift */; };
+		C057C9BE2BEBFDAD00D57102 /* RequestTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057C9BD2BEBFDAD00D57102 /* RequestTypeModel.swift */; };
+		C06BADD42BEC0CBB00FD78B2 /* CertificateRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06BADCF2BEC0CBB00FD78B2 /* CertificateRequestManager.swift */; };
+		C06BADD52BEC0CBB00FD78B2 /* CertificateRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06BADCF2BEC0CBB00FD78B2 /* CertificateRequestManager.swift */; };
+		C06BADD62BEC0CBB00FD78B2 /* CertRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06BADD02BEC0CBB00FD78B2 /* CertRequestConfiguration.swift */; };
+		C06BADD72BEC0CBB00FD78B2 /* CertRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06BADD02BEC0CBB00FD78B2 /* CertRequestConfiguration.swift */; };
+		C06BADD82BEC0CBB00FD78B2 /* KeychainHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06BADD12BEC0CBB00FD78B2 /* KeychainHandler.swift */; };
+		C06BADD92BEC0CBB00FD78B2 /* KeychainHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06BADD12BEC0CBB00FD78B2 /* KeychainHandler.swift */; };
+		C06BADDA2BEC0CBB00FD78B2 /* test_certificate.p12 in Resources */ = {isa = PBXBuildFile; fileRef = C06BADD22BEC0CBB00FD78B2 /* test_certificate.p12 */; };
+		C06BADDB2BEC0CBB00FD78B2 /* test_certificate.p12 in Resources */ = {isa = PBXBuildFile; fileRef = C06BADD22BEC0CBB00FD78B2 /* test_certificate.p12 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,12 +47,23 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C04D81892BEBC92C0024FDFC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C04D81882BEBC92C0024FDFC /* CertificateSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9712A85B213EED15003A2789 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		972DA467258D53C900ABD6A3 /* CertificateSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CertificateSDK.xcframework; sourceTree = "<group>"; };
-		97BE792F20AB6FF3009579E5 /* Certificate SDK Sample App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Certificate SDK Sample App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97BE792F20AB6FF3009579E5 /* Certificate SDK Sample iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Certificate SDK Sample iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BE793220AB6FF3009579E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97BE793420AB6FF3009579E5 /* SetupTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTestViewController.swift; sourceTree = "<group>"; };
 		97BE793620AB6FF3009579E5 /* ActionLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionLogViewController.swift; sourceTree = "<group>"; };
@@ -48,10 +72,18 @@
 		97BE793E20AB6FF5009579E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97BE794020AB6FF5009579E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97BE794620AB70D2009579E5 /* Jamf-one-color-knockout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Jamf-one-color-knockout.png"; sourceTree = "<group>"; };
-		97BE794820AF7ABA009579E5 /* CertificateSDKSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateSDKSetup.swift; sourceTree = "<group>"; };
-		97BE9ACD20B32CA00047C4E8 /* test_certificate.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_certificate.p12; sourceTree = "<group>"; };
-		97FFD0FA20DDA1BD00355359 /* KeychainHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHandler.swift; sourceTree = "<group>"; };
-		97FFD0FC20E150E300355359 /* CertificateRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateRequestManager.swift; sourceTree = "<group>"; };
+		C034E8052BEC2D7800BF02D1 /* LocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationService.swift; sourceTree = "<group>"; };
+		C04D81732BEBC9130024FDFC /* Certificate SDK Sample visionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Certificate SDK Sample visionOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04D81792BEBC9130024FDFC /* CertificateSDKSampleVisionOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateSDKSampleVisionOSApp.swift; sourceTree = "<group>"; };
+		C04D817B2BEBC9130024FDFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C04D817D2BEBC9140024FDFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C04D81822BEBC9140024FDFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C057C9BB2BEBFCBF00D57102 /* RequestTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTypeView.swift; sourceTree = "<group>"; };
+		C057C9BD2BEBFDAD00D57102 /* RequestTypeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTypeModel.swift; sourceTree = "<group>"; };
+		C06BADCF2BEC0CBB00FD78B2 /* CertificateRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificateRequestManager.swift; sourceTree = "<group>"; };
+		C06BADD02BEC0CBB00FD78B2 /* CertRequestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertRequestConfiguration.swift; sourceTree = "<group>"; };
+		C06BADD12BEC0CBB00FD78B2 /* KeychainHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainHandler.swift; sourceTree = "<group>"; };
+		C06BADD22BEC0CBB00FD78B2 /* test_certificate.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_certificate.p12; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +95,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C04D81702BEBC9130024FDFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04D81872BEBC92C0024FDFC /* CertificateSDK.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,45 +110,77 @@
 			isa = PBXGroup;
 			children = (
 				9712A85B213EED15003A2789 /* .swiftlint.yml */,
-				97BE793120AB6FF3009579E5 /* Certificate SDK Sample App */,
+				97BE793120AB6FF3009579E5 /* Certificate SDK Sample iOS */,
+				C06BADD32BEC0CBB00FD78B2 /* Certificate SDK Sample Shared */,
+				C04D81742BEBC9130024FDFC /* Certificate SDK Sample visionOS */,
 				972DA467258D53C900ABD6A3 /* CertificateSDK.xcframework */,
 				97BE793020AB6FF3009579E5 /* Products */,
+				C04D81862BEBC92C0024FDFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		97BE793020AB6FF3009579E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				97BE792F20AB6FF3009579E5 /* Certificate SDK Sample App.app */,
+				97BE792F20AB6FF3009579E5 /* Certificate SDK Sample iOS.app */,
+				C04D81732BEBC9130024FDFC /* Certificate SDK Sample visionOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		97BE793120AB6FF3009579E5 /* Certificate SDK Sample App */ = {
+		97BE793120AB6FF3009579E5 /* Certificate SDK Sample iOS */ = {
 			isa = PBXGroup;
 			children = (
 				97BE793220AB6FF3009579E5 /* AppDelegate.swift */,
 				97BE793420AB6FF3009579E5 /* SetupTestViewController.swift */,
 				97BE793620AB6FF3009579E5 /* ActionLogViewController.swift */,
-				97FFD0FC20E150E300355359 /* CertificateRequestManager.swift */,
-				97FFD0FA20DDA1BD00355359 /* KeychainHandler.swift */,
-				97BE794820AF7ABA009579E5 /* CertificateSDKSetup.swift */,
 				97BE793820AB6FF3009579E5 /* Main.storyboard */,
 				97BE793B20AB6FF5009579E5 /* Assets.xcassets */,
 				97BE793D20AB6FF5009579E5 /* LaunchScreen.storyboard */,
 				97BE794620AB70D2009579E5 /* Jamf-one-color-knockout.png */,
-				97BE9ACD20B32CA00047C4E8 /* test_certificate.p12 */,
 				97BE794020AB6FF5009579E5 /* Info.plist */,
 			);
-			path = "Certificate SDK Sample App";
+			path = "Certificate SDK Sample iOS";
+			sourceTree = "<group>";
+		};
+		C04D81742BEBC9130024FDFC /* Certificate SDK Sample visionOS */ = {
+			isa = PBXGroup;
+			children = (
+				C04D81792BEBC9130024FDFC /* CertificateSDKSampleVisionOSApp.swift */,
+				C04D817B2BEBC9130024FDFC /* ContentView.swift */,
+				C057C9BD2BEBFDAD00D57102 /* RequestTypeModel.swift */,
+				C057C9BB2BEBFCBF00D57102 /* RequestTypeView.swift */,
+				C04D817D2BEBC9140024FDFC /* Assets.xcassets */,
+				C04D81822BEBC9140024FDFC /* Info.plist */,
+			);
+			path = "Certificate SDK Sample visionOS";
+			sourceTree = "<group>";
+		};
+		C04D81862BEBC92C0024FDFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C06BADD32BEC0CBB00FD78B2 /* Certificate SDK Sample Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C06BADCF2BEC0CBB00FD78B2 /* CertificateRequestManager.swift */,
+				C06BADD02BEC0CBB00FD78B2 /* CertRequestConfiguration.swift */,
+				C06BADD12BEC0CBB00FD78B2 /* KeychainHandler.swift */,
+				C034E8052BEC2D7800BF02D1 /* LocalNotificationService.swift */,
+				C06BADD22BEC0CBB00FD78B2 /* test_certificate.p12 */,
+			);
+			path = "Certificate SDK Sample Shared";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		97BE792E20AB6FF3009579E5 /* Certificate SDK Sample App */ = {
+		97BE792E20AB6FF3009579E5 /* Certificate SDK Sample iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97BE794320AB6FF5009579E5 /* Build configuration list for PBXNativeTarget "Certificate SDK Sample App" */;
+			buildConfigurationList = 97BE794320AB6FF5009579E5 /* Build configuration list for PBXNativeTarget "Certificate SDK Sample iOS" */;
 			buildPhases = (
 				97BE792B20AB6FF3009579E5 /* Sources */,
 				97BE792C20AB6FF3009579E5 /* Frameworks */,
@@ -120,9 +192,27 @@
 			);
 			dependencies = (
 			);
-			name = "Certificate SDK Sample App";
+			name = "Certificate SDK Sample iOS";
 			productName = "Certificate SDK Sample App";
-			productReference = 97BE792F20AB6FF3009579E5 /* Certificate SDK Sample App.app */;
+			productReference = 97BE792F20AB6FF3009579E5 /* Certificate SDK Sample iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C04D81722BEBC9130024FDFC /* Certificate SDK Sample visionOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C04D81832BEBC9140024FDFC /* Build configuration list for PBXNativeTarget "Certificate SDK Sample visionOS" */;
+			buildPhases = (
+				C04D816F2BEBC9130024FDFC /* Sources */,
+				C04D81702BEBC9130024FDFC /* Frameworks */,
+				C04D81712BEBC9130024FDFC /* Resources */,
+				C04D81892BEBC92C0024FDFC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Certificate SDK Sample visionOS";
+			productName = "Certificate SDK Sample VisionOS";
+			productReference = C04D81732BEBC9130024FDFC /* Certificate SDK Sample visionOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,8 +221,9 @@
 		97BE792720AB6FF3009579E5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1220;
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
 				ORGANIZATIONNAME = Jamf;
 				TargetAttributes = {
 					97BE792E20AB6FF3009579E5 = {
@@ -143,6 +234,9 @@
 								enabled = 0;
 							};
 						};
+					};
+					C04D81722BEBC9130024FDFC = {
+						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
@@ -159,7 +253,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				97BE792E20AB6FF3009579E5 /* Certificate SDK Sample App */,
+				97BE792E20AB6FF3009579E5 /* Certificate SDK Sample iOS */,
+				C04D81722BEBC9130024FDFC /* Certificate SDK Sample visionOS */,
 			);
 		};
 /* End PBXProject section */
@@ -170,10 +265,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BE793F20AB6FF5009579E5 /* LaunchScreen.storyboard in Resources */,
+				C06BADDA2BEC0CBB00FD78B2 /* test_certificate.p12 in Resources */,
 				97BE793C20AB6FF5009579E5 /* Assets.xcassets in Resources */,
 				97BE794720AB70D2009579E5 /* Jamf-one-color-knockout.png in Resources */,
 				97BE793A20AB6FF3009579E5 /* Main.storyboard in Resources */,
-				97BE9ACE20B32CA00047C4E8 /* test_certificate.p12 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04D81712BEBC9130024FDFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04D817E2BEBC9140024FDFC /* Assets.xcassets in Resources */,
+				C06BADDB2BEC0CBB00FD78B2 /* test_certificate.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +286,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		9797329720B4A8C000CF87D8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -191,7 +296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -202,11 +307,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BE793720AB6FF3009579E5 /* ActionLogViewController.swift in Sources */,
+				C034E8062BEC2D7800BF02D1 /* LocalNotificationService.swift in Sources */,
+				C06BADD42BEC0CBB00FD78B2 /* CertificateRequestManager.swift in Sources */,
+				C06BADD82BEC0CBB00FD78B2 /* KeychainHandler.swift in Sources */,
 				97BE793520AB6FF3009579E5 /* SetupTestViewController.swift in Sources */,
-				97FFD0FB20DDA1BD00355359 /* KeychainHandler.swift in Sources */,
-				97FFD0FD20E150E300355359 /* CertificateRequestManager.swift in Sources */,
-				97BE794920AF7ABA009579E5 /* CertificateSDKSetup.swift in Sources */,
+				C06BADD62BEC0CBB00FD78B2 /* CertRequestConfiguration.swift in Sources */,
 				97BE793320AB6FF3009579E5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04D816F2BEBC9130024FDFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C057C9BC2BEBFCBF00D57102 /* RequestTypeView.swift in Sources */,
+				C057C9BE2BEBFDAD00D57102 /* RequestTypeModel.swift in Sources */,
+				C04D817C2BEBC9130024FDFC /* ContentView.swift in Sources */,
+				C04D817A2BEBC9130024FDFC /* CertificateSDKSampleVisionOSApp.swift in Sources */,
+				C034E8072BEC2D7800BF02D1 /* LocalNotificationService.swift in Sources */,
+				C06BADD92BEC0CBB00FD78B2 /* KeychainHandler.swift in Sources */,
+				C06BADD72BEC0CBB00FD78B2 /* CertRequestConfiguration.swift in Sources */,
+				C06BADD52BEC0CBB00FD78B2 /* CertificateRequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -284,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -297,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -339,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -353,7 +476,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Certificate SDK Sample App/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Certificate SDK Sample iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,7 +495,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Certificate SDK Sample App/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Certificate SDK Sample iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +506,72 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C04D81842BEBC9140024FDFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Jamf Cert SDK";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jamf.certificate-sdk.sample.vision";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Debug;
+		};
+		C04D81852BEBC9140024FDFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Jamf Cert SDK";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jamf.certificate-sdk.sample.vision";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.1;
 			};
 			name = Release;
 		};
@@ -394,11 +587,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97BE794320AB6FF5009579E5 /* Build configuration list for PBXNativeTarget "Certificate SDK Sample App" */ = {
+		97BE794320AB6FF5009579E5 /* Build configuration list for PBXNativeTarget "Certificate SDK Sample iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97BE794420AB6FF5009579E5 /* Debug */,
 				97BE794520AB6FF5009579E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C04D81832BEBC9140024FDFC /* Build configuration list for PBXNativeTarget "Certificate SDK Sample visionOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C04D81842BEBC9140024FDFC /* Debug */,
+				C04D81852BEBC9140024FDFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
