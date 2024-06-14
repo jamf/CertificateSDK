@@ -1,0 +1,6 @@
+framework module CertificateSDK {
+  umbrella header "CertificateSDK.h"
+  export *
+
+  module * { export * }
+}

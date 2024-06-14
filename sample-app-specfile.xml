@@ -14,7 +14,7 @@
 		</string>
 		<string keyName="com.jamf.config.device.udid">
 			<defaultValue>
-				<value>UDID</value>
+				<value>$MANAGEMENTID</value>
 			</defaultValue>
 		</string>
 		<integer keyName="com.jamf.config.certificate-request.pkiId">
