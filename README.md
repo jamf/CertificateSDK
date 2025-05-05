@@ -23,8 +23,10 @@ To install via the Swift Package Manager add the following line to your `Package
 
 #### Framework Architectures
 
-The included XCFramework ships with support for the iOS and visionOS simulators on Apple Silicon and Intel-based Mac computers, and iOS and visionOS devices using the arm64 architecture.  This allows app developers to use the
-framework on actual iOS and visionOS devices and in the simulators while developing and testing their apps.
+The included XCFramework ships with support for the iOS and visionOS simulators on Apple Silicon and
+Intel-based Mac computers, and iOS and visionOS devices using the arm64 architecture.  This allows app
+developers to use the framework on actual iOS and visionOS devices and in the simulators while
+developing and testing their apps.
 
 --------
 
@@ -48,12 +50,25 @@ with `com.jamf.config.` so they will not clash with your own naming conventions 
     <string>1</string>
     <key>com.jamf.config.certificate-request.template</key>
     <string>User2</string>
+    <key>com.jamf.config.certificate-request.keySize</key>
+    <integer>4096</integer>
     <key>com.jamf.config.certificate-request.subject</key>
     <string>cn=something</string>
-    <key>com.jamf.config.certificate-request.sanType</key>
-    <string>rfc822Name</string>
-    <key>com.jamf.config.certificate-request.sanValue</key>
-    <string>somebody@example.com</string>
+    <key>com.jamf.config.certificate-request.subjectAlternativeNames</key>
+    <array>
+        <dict>
+            <key>com.jamf.config.certificate-request.sanType</key>
+            <string>rfc822Name</string>
+            <key>com.jamf.config.certificate-request.sanValue</key>
+            <string>somebody@example.com</string>
+        </dict>
+        <dict>
+            <key>com.jamf.config.certificate-request.sanType</key>
+            <string>userPrincipalName</string>
+            <key>com.jamf.config.certificate-request.sanValue</key>
+            <string>somebody@example.com</string>
+        </dict>
+    </array>
     <key>com.jamf.config.certificate-request.signature</key>
     <string>$JAMF_SIGNATURE_com.jamf.config.certificate-request</string>
     </dict>
@@ -71,13 +86,17 @@ will be specific to your organization.  You should confer with those responsible
 Certificate Authority to ensure the proper settings are configured for your app.
 
 * `pkiId`: (an integer but typed as string in the MAC) Jamf Pro ID of the PKI Integration/Certificate Authority to be used; find this in the Jamf Pro
-web UI at Settings > PKI Certificates > Your ADCS CA settings and then look in the URL bar for the number after "id=".  You should have a URL something like "adcsSettings.html?id=3" and enter the number `3` in the MAC
-* `template`: (string) Certificate template name as defined in your CA
-* `subject`: (string) Subject to include in the certificate signing request
-* `sanType`: (string) One of 'rfc822Name', 'dNSName', or 'uniformResourceIdentifier'
-* `sanValue`: (string) Subject Alternative Name to include in the certificate signing request
+web UI at Settings > PKI Certificates > Your ADCS CA settings and then look in the URL bar for the number after "id=".  You should have a URL something like "adcsSettings.html?id=3" and enter the number `3` in the AppConfig
+* `template`: (string) Certificate template name as defined in your CA.
+* `subject`: (string) Subject to include in the certificate signing request.
+* `keySize`: (integer) The number of bits used in cryptographic algorithm of the certificate.  Must be one of `2048`, `4096` or `8192`; defaults to `2048` if not specified.
+* `subjectAlternativeNames`: (array) Available starting in Jamf Pro 11.17.0. An array of subject alternative name dictionaries.
+    * `sanType`: (string) One of 'rfc822Name', 'dNSName', 'uniformResourceIdentifier', or 'userPrincipalName.'
+    * `sanValue`: (string) Subject Alternative Name to include in the certificate signing request.
 
 With the `subject` and `sanValue` fields, variable substitution is available as discussed under [Payload Variables for Configuration Profiles](https://learn.jamf.com/en-US/bundle/jamf-pro-documentation-current/page/Mobile_Device_Configuration_Profiles.html#ariaid-title3).
+
+Jamf Pro 11.17.0 added the `keySize` and `subjectAlternativeNames` top level keys.  Jamf Pro 11.16 and earlier do not support `keySize`, and the `sanType` and `sanValue` keys should be specified at the top level instead of within the `subjectAlternativeNames` array.  See earlier versions of the CertificateSDK for details.
 
 --
 

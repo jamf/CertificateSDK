@@ -129,8 +129,9 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
     ///                         know how to display the notification (or to NOT display the notification at all).
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
-                                withCompletionHandler completionHandler: @escaping
-        (UNNotificationPresentationOptions) -> Void) {
+                                withCompletionHandler
+                                completionHandler: @escaping (UNNotificationPresentationOptions)
+                                -> Void) {
         if notification.request.identifier == Self.kRenewalIdentifier {
             // Since we're in the foreground already, we can automatically do this renewal and not show the alert.
             self.requestManager?.textOutputHandler?("Auto renew in foreground")
